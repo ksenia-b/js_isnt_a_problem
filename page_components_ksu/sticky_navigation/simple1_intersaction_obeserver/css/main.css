@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.site-logo{
+  font-weight: 900;
+  font-size: 0.8rem;
+  color: var(--text);
+  text-decoration: none;
+    padding: 15px;
+}
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav__link {
+  --spacing: 1em;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.main-nav{
+    margin:0 auto;
+}
+.main-nav li{
+    float:left;
+}
+
+.nav-scrolled {
+  --text: #333;
+  --text-inverse: #f4f4f4;
+  --background: #f4f4f4;
+  /*  Those are custom properties. And the reason for this is that he is only changing colors at bunch of places at once, but he only have to worry about this in NOT all the different places tha it is actually changing. */
+  /*  The reason that he is isolating the properties in header is that hs is isolating them for header only and wouldn't be using them outside of that. But it this color that you are using in entire site this doesn't make sense. !!! That means that anything that is inside of a header doesn't inherit this.*/
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  background: #555151;
+  color: white;
+  opacity: 95%;
+}
+
+.home-intro {
+  padding: 50vh 0;
+  background: #123 url(//unsplash.it/900);
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: white;
+  text-align: center;
+}
